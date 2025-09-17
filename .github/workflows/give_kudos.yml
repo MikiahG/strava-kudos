@@ -10,7 +10,7 @@ env:
   STRAVA_PASSWORD: ${{ secrets.STRAVA_PASSWORD }}
 jobs:
   run-kudos-cron:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3 
@@ -22,3 +22,4 @@ jobs:
       - run: playwright install
       - run: python give_kudos.py
         
+
